@@ -1,3 +1,7 @@
+---
+ import './src/styles/global.css'
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,9 +9,11 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Gaston Maidana</title>
 	</head>
-	<body>
+	<body class="bg-gradient-to-br from-neutral-100 to-neutral-300 
+		dark:from-gray-800 dark:to-black sm:px-2 md:px-6 lg:px-40
+		text-neutral-900 dark:text-neutral-100 text-balance">
 		<slot />
 	</body>
 </html>
