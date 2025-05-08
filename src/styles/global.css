@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Nimbus Sans";
-  src: url("/fonts/NimbusSanL-Reg.ttf") format("woff2");
+  src: url("/fonts/NimbusSanL-Reg.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Nimbus Sans";
-  src: url("/fonts/NimbusSanL-Bol.ttf") format("woff2");
+  src: url("/fonts/NimbusSanL-Bol.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -19,6 +19,31 @@
 
 @theme {
   --font-nimbus: "Nimbus Sans", sans-serif;
+}
+
+@layer utilities {
+  @keyframes gradient-move {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 300% 200%;
+    animation: gradient-move 2s ease infinite;
+  }
+
+  .clip-hide {
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  }
+
+  .clip-show {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  }
+
 }
 
 
